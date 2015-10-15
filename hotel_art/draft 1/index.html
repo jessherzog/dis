@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<script src="../jquery.js"></script>
+	<title>Draft</title>    
+    
+    <style>
+    .slide{
+    	position: absolute;
+    	width: 100%;
+    	height: 100vh;
+    	display: none;
+    }
+    .slide:first-child{
+		display:block;
+    }
+	   	.ex01{
+	   	 	background: url("../_assets/01/background.jpg") center fixed;
+	   	 	background-repeat: no-repeat;
+	   	 	background-size: cover;
+		}
+		.ex02{
+	   	 	background: url("../_assets/02/background.jpg") center fixed;
+	   	 	background-repeat: no-repeat;
+	   	 	background-size: cover;
+		}
+		.ex03{
+	   	 	background: url("../_assets/03/background.jpg") center fixed;
+	   	 	background-repeat: no-repeat;
+	   	 	background-size: cover;
+		}
+		.ex04{
+	   	 	background: url("../_assets/04/background.jpg") center fixed;
+	   	 	background-repeat: no-repeat;
+	   	 	background-size: cover;
+		}
+		img{
+			position: absolute;
+		}
+     </style>
+
+</head>
+<body>
+<div class = "slides">
+	<div class = "ex01 slide">
+		<img src = "../_assets/01/00.png"/>
+		<img src = "../_assets/01/01.png"/>
+		<img src = "../_assets/01/02.png"/>
+		<img src = "../_assets/01/03.png"/>
+		<img src = "../_assets/01/04.png"/>
+		<img src = "../_assets/01/05.png"/>
+		<img src = "../_assets/01/06.png"/>
+		<img src = "../_assets/01/07.png"/>
+		<img src = "../_assets/01/08.png"/>
+		<img src = "../_assets/01/09.png"/>
+		<img src = "../_assets/01/10.png"/>
+		<img src = "../_assets/01/11.jpg"/>
+		<img src = "../_assets/01/12.png"/>
+		<img src = "../_assets/01/13.jpg"/>
+	</div>
+	<div class = "ex02 slide">
+		<img src = "../_assets/02/00.jpg"/>
+		<img src = "../_assets/02/01.jpg"/>
+		<img src = "../_assets/02/02.jpg"/>
+		<img src = "../_assets/02/03.jpg"/>
+		<img src = "../_assets/02/04.jpg"/>
+		<img src = "../_assets/02/05.jpg"/>
+		<img src = "../_assets/02/06.jpg"/>
+		<img src = "../_assets/02/07.jpg"/>
+		<img src = "../_assets/02/08.jpg"/>
+		<img src = "../_assets/02/09.jpg"/>
+		<img src = "../_assets/02/10.jpg"/>
+		<img src = "../_assets/02/11.jpg"/>
+		<img src = "../_assets/02/12.jpg"/>
+		<img src = "../_assets/02/13.jpg"/>
+		<img src = "../_assets/02/14.jpg"/>
+	</div>
+	<div class = "ex03 slide">
+		<img src = "../_assets/03/00.jpg"/>
+		<img src = "../_assets/03/01.jpg"/>
+		<img src = "../_assets/03/02.jpg"/>
+		<img src = "../_assets/03/03.jpg"/>
+		<img src = "../_assets/03/04.jpg"/>
+		<img src = "../_assets/03/05.jpg"/>
+		<img src = "../_assets/03/06.jpg"/>
+		<img src = "../_assets/03/07.jpg"/>
+		<img src = "../_assets/03/08.jpg"/>
+		<img src = "../_assets/03/09.jpg"/>
+		<img src = "../_assets/03/10.jpg"/>
+		<img src = "../_assets/03/11.jpg"/>
+	</div>
+	<div class = "ex04 slide">
+		<img src = "../_assets/04/00.jpg"/>
+		<img src = "../_assets/04/01.jpg"/>
+		<img src = "../_assets/04/02.jpg"/>
+		<img src = "../_assets/04/03.jpg"/>
+		<img src = "../_assets/04/04.jpg"/>
+		<img src = "../_assets/04/05.jpg"/>
+		<img src = "../_assets/04/06.jpg"/>
+		<img src = "../_assets/04/07.jpg"/>
+		<img src = "../_assets/04/08.jpg"/>
+		<img src = "../_assets/04/09.jpg"/>
+		<img src = "../_assets/04/10.jpg"/>
+		<img src = "../_assets/04/11.jpg"/>
+		<img src = "../_assets/04/12.jpg"/>
+	</div>
+</div>
+<script>
+
+$("img").each(function(){
+	var x = Math.random()*$(window).width();
+	var y = Math.random()*$(window).height();
+	
+	$(this).css({
+		"top": y + "px",
+		"left": x + "px"
+	});
+});
+
+// option 1
+$('.ex01 slide').hide();   
+$( ".slides" ).click(function() {
+    $(this).next().slideToggle();
+});
+
+// option 2
+// switch case ... make better with in an array?
+switch ($(".slides").click(function()) {
+  case ".ex02 slide":
+    show();
+  case ".ex03 slide":
+   show();
+  case ".ex04 slide":
+    show();
+  default: 
+  $('.ex01 slide').show(); 
+    ;
+}
+
+</script>
+
+
+</body>
+</html>
