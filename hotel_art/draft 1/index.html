@@ -15,7 +15,7 @@
     	display: none;
     }
     .slide:first-child{
-		display:block;
+		display: block;
     }
 	   	.ex01{
 	   	 	background: url("../_assets/01/background.jpg") center fixed;
@@ -39,6 +39,8 @@
 		}
 		img{
 			position: absolute;
+			max-width: 30em;
+
 		}
      </style>
 
@@ -120,25 +122,10 @@ $("img").each(function(){
 	});
 });
 
-// option 1
-$('.ex01 slide').hide();   
 $( ".slides" ).click(function() {
-    $(this).next().slideToggle();
+    $('.ex01 slide').hide()
+    	$(this).next().slideToggle();
 });
-
-// option 2
-// switch case ... make better with in an array?
-switch ($(".slides").click(function()) {
-  case ".ex02 slide":
-    show();
-  case ".ex03 slide":
-   show();
-  case ".ex04 slide":
-    show();
-  default: 
-  $('.ex01 slide').show(); 
-    ;
-}
 
 </script>
 
